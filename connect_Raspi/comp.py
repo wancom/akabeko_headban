@@ -2,12 +2,12 @@ import RPi.GPIO as GPIO,time,pygame.mixer as game
 
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(20,GPIO.IN)
-GPIO.setup(21,GPIO.IN)
+GPIO.setup(20,GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+GPIO.setup(21,GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(23,GPIO.OUT)
 GPIO.setup(18,GPIO.OUT)
 GPIO.setup(17,GPIO.OUT)
-GPIO.setup(24,GPIO.IN)
+GPIO.setup(24,GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 GPIO.setup(27,GPIO.OUT)
 GPIO.setup(12,GPIO.OUT)
 tmptime=30.0
